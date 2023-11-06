@@ -27,7 +27,7 @@ parser.add_argument('--without', type=str, help="ID de l'appartement à exclure 
 args = parser.parse_args()
 
 # Lire le fichier CSV
-df = pd.read_csv('dataset/paris.csv')
+df = pd.read_csv('dataset/seloger.csv')
 
 # Trouver l'index de l'appartement de référence dans le DataFrame
 reference_index = df[df['id_mutation'] == args.reference_id].index[0]
@@ -67,25 +67,25 @@ df_sorted = df_sorted.iloc[1:].head(10)
 
 #
 # Créer le graphique en fonction des valeurs normalisées
-#lt.figure(figsize=(12, 8))
-#lt.scatter(df_sorted['latitude'], df_sorted['longitude'], c=df_sorted['cosine_similarity'], cmap='viridis', marker='o', s=10)
-#lt.scatter(df_sorted.iloc[0]['latitude'], df_sorted.iloc[0]['longitude'], color='red', marker='*', s=200, label='Référence')
-#lt.xlabel('Latitude (normalisée)')
-#lt.ylabel('Longitude (normalisée)')
-#lt.title('Recommandations en fonction de la similarité cosinus')
-#lt.legend()
-#lt.colorbar(label='Similarité Cosinus')
+plt.figure(figsize=(12, 8))
+plt.scatter(df_sorted['latitude'], df_sorted['longitude'], c=df_sorted['cosine_similarity'], cmap='viridis', marker='o', s=10)
+plt.scatter(df_sorted.iloc[0]['latitude'], df_sorted.iloc[0]['longitude'], color='red', marker='*', s=200, label='Référence')
+plt.xlabel('Latitude (normalisée)')
+plt.ylabel('Longitude (normalisée)')
+plt.title('Recommandations en fonction de la similarité cosinus')
+plt.legend()
+plt.colorbar(label='Similarité Cosinus')
 #
 # Définir les limites des axes pour couvrir l'intervalle
-#lt.xlim(48.819913, 48.900565)
-#lt.ylim(2.257019, 2.410847)
+plt.xlim(48.819913, 48.96)
+plt.ylim(2.257019, 2.32)
 #
 # Enregistrer le graphique
-#lt.savefig('recommandation/top5.png')
+plt.savefig('recommandation/selogertop10.png')
 #
 
 # Supprimer la colonne 'cosine_similarity' avant de sauvegarder le CSV
-df_sorted.drop(columns=['cosine_similarity'], inplace=True)
+#df_sorted.drop(columns=['cosine_similarity'], inplace=True)
 
 # Supprimer la colonne 'coef_plan' avant de sauvegarder le CSV
 df_sorted.drop(columns=['coef_plan'], inplace=True)

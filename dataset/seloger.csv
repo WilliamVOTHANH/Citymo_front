@@ -1,0 +1,12 @@
+id_mutation,type_local,valeur_fonciere,adresse_numero,adresse_nom_voie,code_postal,surface_reelle_bati,nombre_pieces_principales,longitude,latitude
+a0,Appartement,399000,1,Pl. de la Montagne du Goulet,75015.0,42.0,2.0,2.277500,48.844500
+a1,Appartement,370000,0,Rue du G�n�ral Estienne,75015.0,33.21,2.0,2.283492,48.843682
+a2,Appartement,465000,91,Av Felix Faure,75015.0,46.0,2.0,2.283870,48.839360
+a3,Appartement,571650,16,Rue Ballard,75015.0,46.0,2.0,2.277020,48.844550
+a4,Appartement,449900,16,Rue Ballard,75015.0,46.0,2.0,2.277020,48.844550
+a5,Appartement,449000,20,Rue Ballard,75015.0,56.0,2.0,2.277080,48.844280
+a12,Appartement,396000,177,Rue Lecourbe,75015.0,36.0,1.0,2.297164,48.840783
+a15,Appartement,352000,24,Rue Saint-Armand,75015.0,34.0,2.0,2.307917,48.835010
+a21,Appartement,449000,42,Rue de Cronstadt,75015.0,46.0,2.0,2.301852,48.834175
+a23,Appartement,450000,22,Rue St Charles,75015.0,47.0,2.0,2.289181,48.850945
+a44,Appartement,455000,103,Rue Olivier de Serres,75015.0,47.0,2.0,2.292973,48.831565
