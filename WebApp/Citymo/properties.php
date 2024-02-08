@@ -46,7 +46,7 @@ try {
         }
         
         if (!empty($nombre_de_piece)) {
-            $sql .= "AND Nombre_de_pieces >= :nombre_de_piece ";
+            $sql .= "AND Nombre_de_pieces >= :nombre_de_piece";
         }
 
 /*        if (!empty($prixMin) && !empty($prixMax)) {
